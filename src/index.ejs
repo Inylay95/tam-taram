@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
 
@@ -22,8 +23,23 @@
 ]; %>
 
 <header class="header">
-    <div class="header__top">
+    <div class="header__top ">
+        <div class="header-nav-gps">
+
+            <span>Plush Salon 92101</span>
+        </div>
+        <div class="header__logo">
+            <img src="img/icon__logo.png">
+        </div>
+        <div class="wrap">
+            <input type="text" class="input" placeholder="Поиск">
+            <img class="icon-search"src="img/icon__search.png" aria-hidden="true"></img>
+        </div>
     </div>
+    <div class="header__menu">
+
+    </div>
+
     <div class="header__bottom">
         <div class="menu header__menu">
             <% menuItems.forEach((item) => { %>
