@@ -6,56 +6,121 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
-
-<!-- Код для примера -->
-
-<% const menuItems = [
-    {title: 'HairCare', link: '#'},
-    {title: 'Color', link: '#'},
-    {title: 'Styling', link: '#'}
-    /* ... */
-]; %>
-
-<header class="header">
-    <div class="header__top ">
-        <div class="header-nav-gps">
-
-            <span>Plush Salon 92101</span>
+<div class="header">
+    <div class="header__top">
+        <div class="header__right-box">
+            <div class="right-box__heading">
+                <a class="caption__heading" href="#"><span class="caption__heading_nearlest white">Nearest salon</span></a>
+                <img class="caption__icon_link" src="img/ico_dropdown.svg" width="10px" height="10px"/>
+            </div>
+            <span class="right-box__text white">Plush Salon 92101</span>
         </div>
         <div class="header__logo">
-            <img src="img/icon__logo.png">
+            <img src="img/logo.svg" width="342px" height="24px">
         </div>
-        <div class="wrap">
-            <input type="text" class="input" placeholder="Поиск">
-            <img class="icon-search"src="img/icon__search.png" aria-hidden="true"></img>
-        </div>
-    </div>
-    <div class="header__menu">
-
-    </div>
-
-    <div class="header__bottom">
-        <div class="menu header__menu">
-            <% menuItems.forEach((item) => { %>
-            <li class="menu__item"><a class="menu__link" href="<%= item.link; %>"><%= item.title %></a></li>
-            <% }) %>
+        <div class="header__left-box">
+            <img class="caption__icon_link" src="img/ico_search.svg" width="19px" height="19px"/>
         </div>
     </div>
-</header>
+</div>
 
-<img src="img/pic.png" alt="">
-<footer class="footer">
-    <div class="menu menu_bottom footer__menu">
-        <% menuItems.forEach((item) => { %>
-        <li class="menu__item"><a class="menu__link" href="<%= item.link; %>"><%= item.title %></a></li>
-        <% }) %>
+<ul class="header__topmenu topmenu">
+    <div class="container">
+        <li class="topmenu__item"><span class="topmenu__link topmenu__link_haircare">Haircare</span></li>
+        <li class="topmenu__item"><span class="topmenu__link topmenu__link_color">Color</span></li>
+        <li class="topmenu__item"><span class="topmenu__link topmenu__link_styling"> Styling</span></li>
+        <li class="topmenu__item"><span class="topmenu__link topmenu__link_texture">Texture</span></li>
+        <li class="topmenu__item"><span class="topmenu__link topmenu__link_get inspired">Get Inspired</span></li>
+        <li class="topmenu__item"><span class="topmenu__link topmenu__link_social">Social</span></li>
+        <li class="topmenu__item"><span class="topmenu__link topmenu__link_news"> News</span></li>
+        <li class="topmenu__item"><span class="topmenu__link topmenu__link_about">About</span></li>
+        <li class="topmenu__item"><span class="topmenu__link topmenu__link_professional">Professional</span></li>
+</ul>
+</div>
+<ul class="breadcrumbs">
+    <li class="bradcrumbs__link_active"><a href="#"><span class="bradcrumbs__link_active"> Home</span></a></li>
+    <li class="bradcrumbs__link_no-active"><span class="bradcrumbs__link_no-hover">Video</span></li>
+</ul>
+<div class="container">
+<div class="content">
+        <div class="content__block">
+            <h1>Video</h1>
+            <img src="img/ico__content.png"/>
+            <h3 class="content__caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lobortis,
+                nisl at ullamcorper
+                egestas, felisadi piscing dolor, a interdum lorem urna quis magna.</h3>
+        </div>
     </div>
+<div class="content__content-home">
+    <h2 class="content-home__heading">Step<span class="content-home__heading_red">by</span>Step</h2>
+
+            <a data-fancybox
+               href="https://www.youtube.com/watch?v=z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                <img src="https://img.youtube.com/vi/z8M0Fa1JVco/0.jpg" alt="">
+            </a>
+            <a data-fancybox
+               href="https://www.youtube.com/watch?v=z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                <img src="https://img.youtube.com/vi/z8M0Fa1JVco/0.jpg" alt="">
+            </a>
+            <a data-fancybox
+               href="https://www.youtube.com/watch?v=z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                <img src="https://img.youtube.com/vi/z8M0Fa1JVco/0.jpg" alt="">
+            </a>
+            <a data-fancybox
+               href="https://www.youtube.com/watch?v=z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+                <img src="https://img.youtube.com/vi/z8M0Fa1JVco/0.jpg" alt="">
+            </a>
+    </div>
+    <div class="content__content-home">
+        <h2 class="content-home__heading">Craft<span class="content-home__heading_red">Education</span></h2>
+
+        <a data-fancybox
+           href="https://www.youtube.com/watch?v=z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+            <img src="https://img.youtube.com/vi/z8M0Fa1JVco/0.jpg" alt="">
+        </a>
+        <a data-fancybox
+           href="https://www.youtube.com/watch?v=z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+            <img src="https://img.youtube.com/vi/z8M0Fa1JVco/0.jpg" alt="">
+        </a>
+        <a data-fancybox
+           href="https://www.youtube.com/watch?v=z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+            <img src="https://img.youtube.com/vi/z8M0Fa1JVco/0.jpg" alt="">
+        </a>
+        <a data-fancybox
+           href="https://www.youtube.com/watch?v=z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+            <img src="https://img.youtube.com/vi/z8M0Fa1JVco/0.jpg" alt="">
+        </a>
+    </div>
+    <div class="content__content-home">
+        <h2 class="content-home__heading">Inspiration</h2>
+
+        <a data-fancybox
+           href="https://www.youtube.com/watch?v=z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+            <img src="https://img.youtube.com/vi/z8M0Fa1JVco/0.jpg" alt="">
+        </a>
+        <a data-fancybox
+           href="https://www.youtube.com/watch?v=z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+            <img src="https://img.youtube.com/vi/z8M0Fa1JVco/0.jpg" alt="">
+        </a>
+        <a data-fancybox
+           href="https://www.youtube.com/watch?v=z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+            <img src="https://img.youtube.com/vi/z8M0Fa1JVco/0.jpg" alt="">
+        </a>
+        <a data-fancybox
+           href="https://www.youtube.com/watch?v=z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+            <img src="https://img.youtube.com/vi/z8M0Fa1JVco/0.jpg" alt="">
+        </a>
+    </div>
+</div>
+
+<footer>
+
 </footer>
 
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
