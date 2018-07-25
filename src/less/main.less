@@ -9,6 +9,7 @@ body {
 .container {
     max-width: 960px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .header {
@@ -32,7 +33,7 @@ body {
         margin-bottom: 16px;
         justify-content: space-between;
         align-items: center;
-        &__item{
+        &__item {
             display: flex;
         }
 
@@ -112,20 +113,40 @@ h1 {
     &__content-home {
         text-transform: uppercase;
         margin-bottom: 69px;
+        max-width: 100%;
     }
 }
-.content-home__heading_red{
+
+.content-home__heading_red {
     color: #cd1d2c;
 }
-.content__caption{
+
+.content__caption {
     font-size: 30px;
     font-weight: 400;
 }
-h2{
+.video__picture{
+    max-width: 100%;
+    cursor: pointer;
+}
+h2 {
     margin: 0;
     padding: 0;
 }
 
 .content-home__heading {
     font-size: 48px;
+}
+
+footer {
+    background-color: #2a2a2a;
+&__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    &__icons{
+        align-items: center;
+    }
+
 }
