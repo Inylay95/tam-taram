@@ -11,6 +11,105 @@
     <link rel="stylesheet" href="css/main.css">
 
 </head>
+<% const sliders = [
+    {
+        title: 'Step<span class="content-slider__heading_red">by</span>Step',
+        slides: [
+            {
+                video: 'https://youtu.be/z8M0Fa1JVco',
+                img: 'https://img.youtube.com/vi/z8M0Fa1JVco/0.jpg'
+            },
+            {
+                video: 'https://youtu.be/Wi2KcdoCuo4',
+                img: 'https://img.youtube.com/vi/Wi2KcdoCuo4/0.jpg'
+            },
+            {
+                video: 'https://youtu.be/8H6dYUgQKB8',
+                img: 'https://img.youtube.com/vi/8H6dYUgQKB8/0.jpg'
+            },
+            {
+                video: 'https://youtu.be/PZjGrmHdFME',
+                img: 'https://img.youtube.com/vi/PZjGrmHdFME/0.jpg'
+            },
+            {
+                video: 'https://youtu.be/_wLGr24VeoI',
+                img: 'https://img.youtube.com/vi/_wLGr24VeoI/0.jpg'
+            },
+            {
+                video: 'https://youtu.be/DG4FAU5qmMY',
+                img: 'https://img.youtube.com/vi/DG4FAU5qmMY/0.jpg'
+            }
+        ]
+    },
+    {
+        title: 'Craft<span class="content-slider__heading_red">Education</span>',
+        slides: [
+            {
+                video: 'https://youtu.be/RmNWNLXmswk',
+                img: 'https://img.youtube.com/vi/RmNWNLXmswk/0.jpg'
+            },
+            {
+                video: 'https://youtu.be/-tztXOz8Vc0',
+                img: 'https://img.youtube.com/vi/-tztXOz8Vc0/0.jpg'
+            },
+            {
+                video: 'https://youtu.be/kUfIVtyydgQ',
+                img: 'https://img.youtube.com/vi/kUfIVtyydgQ/0.jpg'
+            },
+            {
+                video: 'https://youtu.be/kUfIVtyydgQ',
+                img: 'https://img.youtube.com/vi/kUfIVtyydgQ/0.jpg'
+            }
+
+        ]
+    },
+    {
+        title: 'INSPIRATION',
+        slides: [
+            {
+                video: 'https://youtu.be/VmmwwzR536g',
+                img: 'https://img.youtube.com/vi/VmmwwzR536g/0.jpg'
+            },
+            {
+                video: 'https://youtu.be/vz0k8O-Ef9Y',
+                img: 'https://img.youtube.com/vi/vz0k8O-Ef9Y/0.jpg'
+            },
+            {
+                video: 'https://youtu.be/6oPBFnsqJW8',
+                img: 'https://img.youtube.com/vi/6oPBFnsqJW8/0.jpg'
+            },
+            {
+                video: 'https://youtu.be/6oPBFnsqJW8',
+                img: 'https://img.youtube.com/vi/6oPBFnsqJW8/0.jpg'
+            }
+        ]
+    }
+];
+%>
+
+<% const socials = [
+    {
+        class: 'social__icon_fb',
+        icon: 'img/ico_facebook.svg'
+    },
+    {
+        class: 'social__icon_tw',
+        icon: 'img/ico_twitter.svg'
+    },
+    {
+        class: 'social__icon_pin',
+        icon: 'img/ico_pinterest.svg'
+    },
+    {
+        class: 'social__icon_youtube',
+        icon: 'img/ico_youtube.svg'
+    },
+    {
+        class: 'social__icon_insta',
+        icon: 'img/ico_instagram.svg'
+    }
+] %>
+
 <body>
 <div class="header">
     <div class="header__top clearfix">
@@ -61,77 +160,20 @@
                 nisl at ullamcorper egestas, felisadi piscing dolor, a interdum lorem urna quis magna.</h3>
         </div>
     </div>
-    <div class="content__content-home">
-        <h2 class="content-home__heading">Step<span class="content-home__heading_red">by</span>Step</h2>
-        <div class="your-class">
-            <a data-fancybox
-               href="https://youtu.be/z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                <img src="https://img.youtube.com/vi/z8M0Fa1JVco/0.jpg" alt="">
+    <% sliders.forEach((slider) => { %>
+    <div class="content__content-slider">
+        <h2 class="content-slider__heading">
+            <%- slider.title; %>
+        </h2>
+        <div class="slider">
+            <% slider.slides.forEach((slide) => { %>
+            <a data-fancybox href="<%- slide.video %>">
+                <img src="<%- slide.img %>" alt="">
             </a>
-            <a data-fancybox
-               href="https://youtu.be/Wi2KcdoCuo4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                <img  src="https://img.youtube.com/vi/Wi2KcdoCuo4/0.jpg" alt="">
-            </a>
-            <a data-fancybox
-               href="https://youtu.be/8H6dYUgQKB8&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                <img  src="https://img.youtube.com/vi/8H6dYUgQKB8/0.jpg" alt="">
-            </a>
-            <a data-fancybox
-               href="https://youtu.be/PZjGrmHdFME&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                <img  src="https://img.youtube.com/vi/PZjGrmHdFME/0.jpg" alt="">
-            </a>
-            <a data-fancybox
-               href="https://youtu.be/_wLGr24VeoI&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                <img  src="https://img.youtube.com/vi/_wLGr24VeoI/0.jpg" alt="">
-            </a>
-            <a data-fancybox
-               href="https://youtu.be/DG4FAU5qmMY&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                <img  src="https://img.youtube.com/vi/DG4FAU5qmMY/0.jpg" alt="">
-            </a>
-        </div>
-        <div class="content__content-home">
-            <h2 class="content-home__heading">Craft<span class="content-home__heading_red">Education</span></h2>
-            <div class="your-class">
-                <a data-fancybox
-                   href="https://youtu.be/RmNWNLXmswk&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                    <img src="https://img.youtube.com/vi/RmNWNLXmswk/0.jpg" alt="">
-                </a>
-                <a data-fancybox
-                   href="https://youtu.be/-tztXOz8Vc0&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                    <img src="https://img.youtube.com/vi/-tztXOz8Vc0/0.jpg" alt="">
-                </a>
-                <a data-fancybox
-                   href="https://youtu.be/kUfIVtyydgQ&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                    <img src="https://img.youtube.com/vi/kUfIVtyydgQ/0.jpg" alt="">
-                </a>
-                <a data-fancybox
-                   href="https://youtu.be/kUfIVtyydgQ&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                    <img src="https://img.youtube.com/vi/kUfIVtyydgQ/0.jpg" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="content__content-home">
-            <h2 class="content-home__heading">Inspiration</h2>
-            <div class="your-class">
-                <a data-fancybox
-                   href="https://youtu.be/VmmwwzR536g&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                    <img src="https://img.youtube.com/vi/VmmwwzR536g/0.jpg" alt="">
-                </a>
-                <a data-fancybox
-                   href="https://youtu.be/vz0k8O-Ef9Y&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                    <img src="https://img.youtube.com/vi/vz0k8O-Ef9Y/0.jpg" alt="">
-                </a>
-                <a data-fancybox
-                   href="https://youtu.be/6oPBFnsqJW8&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                    <img src="https://img.youtube.com/vi/6oPBFnsqJW8/0.jpg" alt="">
-                </a>
-                <a data-fancybox
-                   href="https://www.youtube.com/watch?v=z8M0Fa1JVco&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
-                    <img src="https://img.youtube.com/vi/6oPBFnsqJW8/0.jpg" alt="">
-                </a>
-            </div>
+            <% }) %>
         </div>
     </div>
+    <% }) %>
 </div>
 <div class="footer">
     <div class="footer__top clearfix">
@@ -139,25 +181,15 @@
 
         </div>
         <ul class="footer__icons social">
-            <li><a href="" class="social__link">
-                    <img class="social__icon social__icon_fb" src="img/ico_facebook.svg"/></a>
-            </li>
-            <li><a href="" class="social__link">
-                    <img class="social__icon social__icon_tw" src="img/ico_twitter.svg"/></a>
-            </li>
-            <li><a href="" class="social__link">
-                    <img class="social__icon social__icon_pin" src="img/ico_pinterest.svg"/>
-                </a></li>
-            <li><a href="" class="social__link">
-                    <img class="social__icon social__icon_youtube" src="img/ico_youtube.svg"/>
-                </a></li>
-            <li><a href="" class="social__link">
-                    <img class="social__icon social__icon_insta" src="img/ico_instagram.svg"/>
-                </a></li>
+            <% socials.forEach((social) => { %>
+                <li>
+                    <a href="" class="social__link">
+                        <img class="social__icon <%= social.class; %>" src="<%= social.icon; %>"/>
+                    </a>
+                </li>
+            <% }) %>
         </ul>
-        <div class="header__left-box">
-
-        </div>
+        <div class="header__left-box"></div>
     </div>
 </div>
 

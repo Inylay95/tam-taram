@@ -1,7 +1,7 @@
 // Your code here...
 $('[data-fancybox]').fancybox();
 
-$('.your-class').slick({
+$('.slider').slick({
     dots: false,
     infinite: false,
     speed: 300,
