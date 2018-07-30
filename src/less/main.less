@@ -32,7 +32,7 @@ body {
     }
     &__left-box {
         float: right;
-        margin-top: -26px;
+        margin-top: 16px;
     }
     &__menu {
         background-color: #262626;
@@ -54,7 +54,6 @@ body {
         display: flex;
         padding: 15px;
     }
-
     &__list {
         display: flex;
         justify-content: space-around;
@@ -107,7 +106,7 @@ li {
 .breadcrumbs {
     padding-left: 40px;
     text-transform: uppercase;
-    margin-bottom: 44px;
+    margin-bottom: 65px;
     font-family: 'PT Sans Narrow', sans-serif;
     font-weight: 400;
     font-size: 12px;
@@ -145,17 +144,24 @@ h1 {
 .content {
     &__videos {
         border-bottom: 2px solid #686868;
-        margin-bottom: 89px;
+        margin-bottom: 90px;
     }
-    &__content-slider {
-        text-transform: uppercase;
-        &:not(:last-child){
-            margin-bottom: 45px;
+    &__slider-group {
+        &:not(:last-child) {
+            text-transform: uppercase;
+            margin-bottom: 70px;
         }
+    }
+    &__slider-heading {
+        padding-left: 16px;
     }
 }
 
-.content-slider__heading_red {
+.content__slider {
+    padding-bottom: 133px;
+}
+
+.content__slider__heading_red {
     color: #cd1d2c;
     padding-left: 17px;
     padding-right: 17px;
@@ -173,11 +179,6 @@ h1 {
 
 h2 {
     margin: 0;
-    padding: 0;
-}
-
-.content-slider_heading {
-    font-size: 48px;
 }
 
 .slick-slide img {
@@ -219,12 +220,16 @@ h2 {
     margin: 0;
     &__item {
         display: inline-block;
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
     }
 }
 
 .social__icon {
     width: 20px;
     height: 20px;
+
 }
 
 .social__icon path {
@@ -254,13 +259,25 @@ h2 {
         border-radius: 50%;
         width: 76px;
         height: 76px;
+        &_big {
+            position: absolute;
+            top: 110%;
+            width: 167px;
+            height: 167px;
+            img {
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                left: 59%;
+            }
+        }
         img {
             position: absolute;
             top: 50%;
             left: 53%;
             transform: translate(-50%, -50%);
-            width: 39px;
-            height: 39px;
+            width: 35px;
+            height: 35px;
         }
     }
 }
@@ -278,10 +295,12 @@ h2 {
     }
 }
 
-@media screen  and (max-width: 768px) {
-    .menu {
-        display: none;
-    }
+@media screen  and (max-width: 992px) {
+
 }
+@media screen  and (max-width: 768px) {
 
+}
+@media screen  and (max-width: 320px) {
 
+}
