@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -89,23 +89,23 @@
 
 <% const socials = [
     {
-        class: 'social__icon_fb',
+        short_name: 'fb',
         icon: 'img/ico_facebook.svg'
     },
     {
-        class: 'social__icon_tw',
+        short_name: 'tw',
         icon: 'img/ico_twitter.svg'
     },
     {
-        class: 'social__icon_pin',
+        short_name: 'pin',
         icon: 'img/ico_pinterest.svg'
     },
     {
-        class: 'social__icon_youtube',
+        short_name: 'youtube',
         icon: 'img/ico_youtube.svg'
     },
     {
-        class: 'social__icon_insta',
+        short_name: 'insta',
         icon: 'img/ico_instagram.svg'
     }
 ] %>
@@ -116,7 +116,7 @@
         <div class="header__right-box">
             <div class="right-box__heading">
                 <a class="caption__heading" href="#"><span class="caption__heading_nearlest white">Nearest salon</span></a>
-                <img class="caption__icon_link" src="img/ico_dropdown.svg" width="10px" height="10px"/>
+                <img class="caption__icon_link" src="img/ico_dropdown.svg" width="15px" height="15px"/>
             </div>
             <span class="right-box__text white">Plush Salon 92101</span>
         </div>
@@ -124,13 +124,13 @@
             <img src="img/logo.svg" width="342px" height="24px">
         </div>
         <div class="header__left-box">
-            <img class="caption__icon_link" src="img/ico_search.svg" width="19px" height="19px"/>
+            <img class="caption__icon_link" src="img/ico_search.svg" width="20px" height="20px"/>
         </div>
     </div>
     <div class="header__menu menu">
         <div class="container">
             <ul class="menu__list">
-                <li class="menu__item"><span class="menu__link menu__link_haircare">Haircare</span></li>
+                <li class="menu__item"><a href="" class="menu__link menu__link_haircare">Haircare</a></li>
                 <li class="menu__item"><span class="menu__link menu__link_color">Color</span></li>
                 <li class="menu__item"><span class="menu__link menu__link_styling"> Styling</span></li>
                 <li class="menu__item"><span class="menu__link menu__link_texture">Texture</span></li>
@@ -148,54 +148,77 @@
     <li class="bradcrumbs__link_active"><a href="#"><span class="bradcrumbs__link_active"> Home</span></a></li>
     <li class="bradcrumbs__link_no-active"><span class="bradcrumbs__link_no-hover">Video</span></li>
 </ul>
-<div class="container">
-    <div class="content">
+<div class="content">
+    <div class="container">
         <div class="content__videos">
             <h1>Video</h1>
-            <a data-fancybox
-               href="https://youtu.be/hFU5tDlfSns&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0">
+            <a data-fancybox href='https://youtu.be/hFU5tDlfSns'>
                 <img class="content__picture" src="https://img.youtube.com/vi/hFU5tDlfSns/0.jpg" alt=""/>
+                <button class="slider__button"><img src="img/ico__button-play.png" alt=""></button>
             </a>
             <h3 class="content__caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lobortis,
                 nisl at ullamcorper egestas, felisadi piscing dolor, a interdum lorem urna quis magna.</h3>
         </div>
-    </div>
-    <% sliders.forEach((slider) => { %>
-    <div class="content__content-slider">
-        <h2 class="content-slider__heading">
-            <%- slider.title; %>
-        </h2>
-        <div class="slider">
-            <% slider.slides.forEach((slide) => { %>
-            <a data-fancybox href="<%- slide.video %>">
-                <img src="<%- slide.img %>" alt="">
-            </a>
-            <% }) %>
+
+        <% sliders.forEach((slider) => { %>
+        <div class="content__content-slider  ">
+            <h2 class="content-slider__heading">
+                <%- slider.title; %>
+            </h2>
+            <div class="slider">
+                <% slider.slides.forEach((slide) => { %>
+                <a class="slider__item" data-fancybox href="<%- slide.video %>">
+                    <img src="<%- slide.img %>" alt="">
+                    <button class="slider__button"><img src="img/ico__button-play.png" alt=""></button>
+                </a>
+                <% }) %>
+            </div>
         </div>
+        <% }) %>
     </div>
-    <% }) %>
 </div>
 <div class="footer">
-    <div class="footer__top clearfix">
-        <div class="footer__right-box">
-
+    <div class="row align-items-center">
+        <div class="col-4">
+            <div class="footer__block right-block">
+                <div class="right-block__one-title">
+                    <a class="block__title" href="">primacy policy</a>
+                    <a class="block__title" href="">terms of use</a>
+                </div>
+                <div class="right-block__two-title">
+                    <a class="block__title" href="">contact us</a>
+                    <a class="block__title" href="">stemap</a>
+                </div>
+            </div>
         </div>
-        <ul class="footer__icons social">
-            <% socials.forEach((social) => { %>
-                <li>
+        <div class="col-4 text-center">
+            <ul class="footer__icons social">
+                <% socials.forEach((social) => { %>
+                <li class="social__item">
                     <a href="" class="social__link">
-                        <img class="social__icon <%= social.class; %>" src="<%= social.icon; %>"/>
+                        <img class="social__icon social__icon_<%= social.short_name; %>" src="<%= social.icon; %>"/>
                     </a>
                 </li>
-            <% }) %>
-        </ul>
-        <div class="header__left-box"></div>
+                <% }) %>
+            </ul>
+        </div>
+        <div class="col-4 text-right">
+            <div class="footer__block left-block ">
+                <div class="left-block__location">
+                    <a class="block__title" href="">location:united states</a>
+                </div>
+                <div class="left-block__language">
+                    <a class="block__title" href="">language:english</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
 <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>
+
+
