@@ -40,9 +40,13 @@ body {
         justify-content: space-between;
         align-items: center;
         font-size: 14px;
+
     }
 }
-
+.menu__link {
+    color: #cccccc;
+    text-transform: uppercase;
+}
 .clearfix:after {
     content: "";
     display: table;
@@ -84,10 +88,14 @@ ul {
     }
 }
 
-.caption__icon_link {
-    cursor: pointer;
-    width: 15px;
-    height: 15px;
+.caption {
+    &__icon {
+        & _link {
+            cursor: pointer;
+            width: 15px;
+            height: 15px;
+        }
+    }
 }
 
 .white {
@@ -98,11 +106,6 @@ li {
     list-style: none;
 }
 
-.menu__link {
-    color: #cccccc;
-    text-transform: uppercase;
-}
-
 .breadcrumbs {
     padding-left: 40px;
     text-transform: uppercase;
@@ -110,12 +113,13 @@ li {
     font-family: 'PT Sans Narrow', sans-serif;
     font-weight: 400;
     font-size: 12px;
+
     li {
         display: inline-block;
     }
     li::before {
         content: '/';
-        margin-left: 5px;
+        margin-left: 0px;
         margin-right: 5px;
         color: #b8b8b8;
     }
@@ -123,16 +127,16 @@ li {
         content: '';
     }
 }
-
-.bradcrumbs__link_active {
-    color: #8f8f8f;
+.breadcrumbs{
+    &__link {
+        &_active {
+            color: #8f8f8f;
+        }
+        &_no-active {
+            color: #cd1d2c;
+        }
+    }
 }
-
-.bradcrumbs__link_no-active {
-    color: #cd1d2c;
-
-}
-
 h1 {
     font-size: 80px;
     text-transform: uppercase;
@@ -154,17 +158,25 @@ h1 {
     }
     &__slider-heading {
         padding-left: 16px;
+
+    }
+    &__title{
+        color:#cd1d2c;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
 .content__slider {
     padding-bottom: 133px;
-}
+    }
 
-.content__slider__heading_red {
-    color: #cd1d2c;
+
+.content__slider-heading {
     padding-left: 17px;
     padding-right: 17px;
+
+
 }
 
 .content__caption {
@@ -199,8 +211,10 @@ h2 {
     }
 }
 
-.block__title {
-    color: #797979;
+.block {
+    &__title {
+        color: #797979;
+    }
 }
 
 .col-4 {
@@ -226,13 +240,14 @@ h2 {
     }
 }
 
-.social__icon {
-    width: 20px;
-    height: 20px;
-
+.social {
+    &__icon {
+        width: 20px;
+        height: 20px;
+    }
 }
 
-.social__icon path {
+.icon {
     fill: #fff;
 }
 
@@ -266,8 +281,8 @@ h2 {
             height: 167px;
             img {
                 position: absolute;
-                width: 80px;
-                height: 80px;
+                width: 98px;
+                height: 98px;
                 left: 59%;
             }
         }
@@ -279,6 +294,9 @@ h2 {
             width: 35px;
             height: 35px;
         }
+    }
+    &__button_load-more{
+        display: none;
     }
 }
 
@@ -296,11 +314,90 @@ h2 {
 }
 
 @media screen  and (max-width: 992px) {
+    .content {
+        padding: 0 45px;
+    }
 
-}
+    .breadcrumbs {
+        padding-left: 53px;
+    }
+
+    .slider {
+        &__button {
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 50%;
+            left: 39%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            border: none;
+            border-radius: 50%;
+            width: 76px;
+            height: 76px;
+            img {
+                position: absolute;
+                width: 23px;
+                height: 23px;
+            }
+        }
+        &__button_big {
+            position: absolute;
+            top: 115%;
+            width: 167px;
+            height: 167px;
+            left: 50%;
+            img {
+                position: absolute;
+                width: 70px;
+                height: 69px;
+            }
+        }
+        &__button_load-more{
+            display: none;
+        }
+    }
+
+    .slick-slide {
+        img {
+            width: 100%;
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        &_prev {
+            left: -38px;
+        }
+        &_next {
+            right: -38px
+        }
+    }
+
 @media screen  and (max-width: 768px) {
+    .menu{
+        display: none;
+    }
+    .slider{
+        &__button{
+            &_load-more{
+                background: #252525;
 
-}
-@media screen  and (max-width: 320px) {
+            }
+        }
 
-}
+    }
+    .slider {
+        &__button {
+            &_button_big {
+                position: absolute;
+                top: 83%;
+                width: 167px;
+                height: 167px;
+                left: 50%;
+            }
+        }
+    }
+

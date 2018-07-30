@@ -13,7 +13,7 @@
 </head>
 <% const sliders = [
     {
-        title: 'Step<span class="content-slider__heading_red">by</span>Step',
+        title: 'Step<span class="content__title">by</span>Step',
         slides: [
             {
                 video: 'https://youtu.be/z8M0Fa1JVco',
@@ -42,7 +42,7 @@
         ]
     },
     {
-        title: 'Craft<span class="content-slider__heading_red">Education</span>',
+        title: 'Craft<span class="content__title">Education</span>',
         slides: [
             {
                 video: 'https://youtu.be/RmNWNLXmswk',
@@ -170,7 +170,7 @@
 
             <ul class="menu__list">
                 <% menu.forEach((item) =>{ %>
-                <li class="menu__item"><a href="" class="menu__link <%= item.link; %>"><%= item.title;%></a></li>
+                <li class="menu__item"><a href="" class="menu__link <%= item.link; %>"><%= item.title; %></a></li>
                 <% }) %>
             </ul>
 
@@ -178,8 +178,8 @@
     </div>
 </div>
 <ul class="breadcrumbs">
-    <li class="bradcrumbs__link_active"><a href="#"><span class="bradcrumbs__link_active"> Home</span></a></li>
-    <li class="bradcrumbs__link_no-active"><span class="bradcrumbs__link_no-hover">Video</span></li>
+    <li class="bradcrumbs__link_active"><a href="#"><span class="active"> Home</span></a></li>
+    <li class="bradcrumbs__link_no-active "><span class="no-active">Video</span></li>
 </ul>
 <div class="content">
     <div class="container">
@@ -201,12 +201,13 @@
                 <div class="slider">
                     <% slider.slides.forEach((slide) => { %>
                     <a class="slider__item" data-fancybox href="<%- slide.video %>">
-                        <img src="<%- slide.img %>" alt="">
+                        <img class="slider__image" src="<%- slide.img %>" alt="">
                         <button class="slider__button"><img src="img/ico__button-play.png" alt=""></button>
                     </a>
                     <% }) %>
                 </div>
             </div>
+            <button class="slider__button_load-more"><span class="button__load">Load More</span></button>
             <% }) %>
         </div>
     </div>
