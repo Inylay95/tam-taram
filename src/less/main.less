@@ -24,11 +24,7 @@ body {
         float: left;
     }
     &__logo {
-        text-align: center;
         padding-top: 13px;
-        position: absolute;
-        transform: translateX(-50%);
-        left: 50%;
     }
     &__left-box {
         float: right;
@@ -42,11 +38,27 @@ body {
         font-size: 14px;
 
     }
+    @media (min-width: 768px) {
+        &__logo {
+            position: absolute;
+            text-align: center;
+            transform: translateX(-50%);
+            left: 50%;
+        }
+
+    }
+    @media (max-width: 768px) {
+        &__right-box, &__left-box {
+            display: none;
+        }
+    }
 }
+
 .menu__link {
     color: #cccccc;
     text-transform: uppercase;
 }
+
 .clearfix:after {
     content: "";
     display: table;
@@ -127,7 +139,8 @@ li {
         content: '';
     }
 }
-.breadcrumbs{
+
+.breadcrumbs {
     &__link {
         &_active {
             color: #8f8f8f;
@@ -137,6 +150,7 @@ li {
         }
     }
 }
+
 h1 {
     font-size: 80px;
     text-transform: uppercase;
@@ -160,8 +174,8 @@ h1 {
         padding-left: 16px;
 
     }
-    &__title{
-        color:#cd1d2c;
+    &__title {
+        color: #cd1d2c;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -169,13 +183,11 @@ h1 {
 
 .content__slider {
     padding-bottom: 133px;
-    }
-
+}
 
 .content__slider-heading {
     padding-left: 17px;
     padding-right: 17px;
-
 
 }
 
@@ -184,17 +196,16 @@ h1 {
     font-weight: 700;
 }
 
-.content__picture {
-    width: 100%;
-    cursor: pointer;
+.main-video {
+    position: relative;
+    display: block;
+    &__picture {
+        width: 100%;
+    }
 }
 
 h2 {
     margin: 0;
-}
-
-.slick-slide img {
-    width: 314px;
 }
 
 .slick-initialized .slick-slide {
@@ -260,9 +271,13 @@ h2 {
 }
 
 .slider {
-
     &__item {
         position: relative;
+        @media (max-width: 768px) {
+            &:nth-child(n+4) {
+                display: none;
+            }
+        }
     }
     &__button {
         background: rgba(0, 0, 0, 0.5);
@@ -274,16 +289,13 @@ h2 {
         border-radius: 50%;
         width: 76px;
         height: 76px;
+        cursor: pointer;
         &_big {
-            position: absolute;
-            top: 110%;
             width: 167px;
             height: 167px;
             img {
-                position: absolute;
                 width: 98px;
                 height: 98px;
-                left: 59%;
             }
         }
         img {
@@ -295,7 +307,7 @@ h2 {
             height: 35px;
         }
     }
-    &__button_load-more{
+    &__button_load-more {
         display: none;
     }
 }
@@ -323,43 +335,12 @@ h2 {
     }
 
     .slider {
-        &__button {
-            background: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 50%;
-            left: 39%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            border: none;
-            border-radius: 50%;
-            width: 76px;
-            height: 76px;
-            img {
-                position: absolute;
-                width: 23px;
-                height: 23px;
-            }
-        }
-        &__button_big {
-            position: absolute;
-            top: 115%;
-            width: 167px;
-            height: 167px;
-            left: 50%;
-            img {
-                position: absolute;
-                width: 70px;
-                height: 69px;
-            }
-        }
-        &__button_load-more{
-            display: none;
-        }
-    }
-
-    .slick-slide {
-        img {
+        &__image {
             width: 100%;
+        }
+
+        &__button_load-more {
+            display: none;
         }
     }
 
@@ -375,20 +356,23 @@ h2 {
             right: -38px
         }
     }
+}
 
 @media screen  and (max-width: 768px) {
-    .menu{
+    .menu {
         display: none;
     }
-    .slider{
-        &__button{
-            &_load-more{
+
+    .slider {
+        &__button {
+            &_load-more {
                 background: #252525;
 
             }
         }
 
     }
+
     .slider {
         &__button {
             &_button_big {
@@ -401,3 +385,4 @@ h2 {
         }
     }
 
+}
