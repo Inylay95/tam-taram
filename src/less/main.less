@@ -140,17 +140,13 @@ li {
     }
 }
 
-.breadcrumbs {
-    &__link {
-        &_active {
-            color: #8f8f8f;
-        }
-        &_no-active {
-            color: #cd1d2c;
-        }
-    }
-}
 
+.active {
+    color: #8f8f8f;
+}
+.no-active {
+    color: #cd1d2c;
+}
 h1 {
     font-size: 80px;
     text-transform: uppercase;
@@ -160,6 +156,11 @@ h1 {
 }
 
 .content {
+    &__title{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    }
     &__videos {
         border-bottom: 2px solid #686868;
         margin-bottom: 90px;
@@ -170,7 +171,21 @@ h1 {
             margin-bottom: 70px;
         }
     }
-    &__slider-heading {
+    &__caption {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    &__slider {
+        &_heading{
+
+        }
+        padding-bottom: 133px;
+    }
+}
+
+
+.slider {
+    &_heading {
         padding-left: 16px;
 
     }
@@ -180,22 +195,6 @@ h1 {
         padding-right: 15px;
     }
 }
-
-.content__slider {
-    padding-bottom: 133px;
-}
-
-.content__slider-heading {
-    padding-left: 17px;
-    padding-right: 17px;
-
-}
-
-.content__caption {
-    font-size: 30px;
-    font-weight: 700;
-}
-
 .main-video {
     position: relative;
     display: block;
@@ -307,9 +306,6 @@ h2 {
             height: 35px;
         }
     }
-    &__button_load-more {
-        display: none;
-    }
 }
 
 .arrow {
@@ -326,10 +322,10 @@ h2 {
 }
 
 @media screen  and (max-width: 992px) {
-    .content {
-        padding: 0 45px;
-    }
 
+.container{
+    padding: 0 49px;
+}
     .breadcrumbs {
         padding-left: 53px;
     }
@@ -339,9 +335,6 @@ h2 {
             width: 100%;
         }
 
-        &__button_load-more {
-            display: none;
-        }
     }
 
     .arrow {
@@ -363,17 +356,11 @@ h2 {
         display: none;
     }
 
-    .slider {
-        &__button {
-            &_load-more {
-                background: #252525;
 
-            }
+    .slider {
+        &__item{
+            display: block;
         }
-
-    }
-
-    .slider {
         &__button {
             &_button_big {
                 position: absolute;
@@ -382,7 +369,30 @@ h2 {
                 height: 167px;
                 left: 50%;
             }
+
         }
     }
+    .row {
+        flex-wrap: wrap;
+    }
 
+    .col-4 {
+        width: 100%;
+        text-align: left;
+    }
+    .left-block{
+        &__location{
+            text-align: left;
+        }
+        &__language{
+            text-align: left;
+        }
+    }
+    .social{
+        &__item{
+           img{
+               order: -1;
+           }
+        }
+    }
 }
