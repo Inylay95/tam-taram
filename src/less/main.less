@@ -20,6 +20,16 @@ body {
         background: #5b1dcd;
         padding: 15px 38px;
     }
+
+    .mobile{
+        background: #212121;
+        &__right-box{
+
+        }
+        &__left-box{
+
+        }
+    }
     &__right-box {
         float: left;
     }
@@ -102,7 +112,7 @@ ul {
 
 .caption {
     &__icon {
-        & _link {
+        &_link {
             cursor: pointer;
             width: 15px;
             height: 15px;
@@ -131,7 +141,7 @@ li {
     }
     li::before {
         content: '/';
-        margin-left: 0px;
+        margin-left: 0;
         margin-right: 5px;
         color: #b8b8b8;
     }
@@ -156,11 +166,11 @@ h1 {
 }
 
 .content {
-    &__title{
+    &__title {
         padding-left: 15px;
         padding-right: 15px;
     }
-    }
+
     &__videos {
         border-bottom: 2px solid #686868;
         margin-bottom: 90px;
@@ -176,14 +186,11 @@ h1 {
         font-weight: 700;
     }
     &__slider {
-        &_heading{
-
+        &_heading {
+            padding-bottom: 133px;
         }
-        padding-bottom: 133px;
     }
 }
-
-
 .slider {
     &_heading {
         padding-left: 16px;
@@ -205,10 +212,6 @@ h1 {
 
 h2 {
     margin: 0;
-}
-
-.slick-initialized .slick-slide {
-    padding: 16px;
 }
 
 .footer {
@@ -238,28 +241,22 @@ h2 {
 .text-right {
     text-align: right;
 }
+    .social {
+        padding: 0;
+        margin: 0;
 
-.social {
-    padding: 0;
-    margin: 0;
-    &__item {
-        display: inline-block;
-        &:not(:last-child) {
-            margin-right: 25px;
+        &__icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        &__item {
+            display: inline-block;
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
         }
     }
-}
-
-.social {
-    &__icon {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-.icon {
-    fill: #fff;
-}
 
 .row {
     display: flex;
@@ -308,6 +305,7 @@ h2 {
     }
 }
 
+
 .arrow {
     position: absolute;
     top: 50%;
@@ -355,6 +353,7 @@ h2 {
     .menu {
         display: none;
     }
+
 
 
     .slider {

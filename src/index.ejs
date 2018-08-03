@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.css"/>
 
 </head>
 <% const sliders = [
@@ -150,6 +150,14 @@
 
 <body>
 <div class="header">
+    <div class="header__mobile mobile">
+        <div class="mobile__right-box">
+            <span class="right-box__text white">Plush Salon 92101</span>
+        </div>
+        <div class="mobile__left-box">
+            <img class="caption__icon_link" src="img/ico_search.svg" width="20px" height="20px"/>
+        </div>
+    </div>
     <div class="header__top clearfix">
         <div class="header__right-box">
             <div class="right-box__heading">
@@ -175,6 +183,7 @@
         </div>
     </div>
 </div>
+
 <ul class="breadcrumbs">
     <li class="bradcrumbs__link_active"><a href="#"><span class="active"> Home</span></a></li>
     <li class="bradcrumbs__link_no-active "><span class="no-active">Video</span></li>
